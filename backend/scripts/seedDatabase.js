@@ -18,7 +18,7 @@ const seedDatabase = async () => {
         // Limpiar datos existentes
         await Usuario.deleteMany({})
         await CursoFarit.deleteMany({})
-        console.log("🧹 Datos existentes eliminados")
+        console.log("Datos existentes eliminados")
 
         // Crear usuarios de prueba
         const usuarios = [
@@ -153,17 +153,17 @@ const seedDatabase = async () => {
         ]
 
         await CursoFarit.create(cursos)
-        console.log("📚 Cursos de prueba creados")
+        console.log("Cursos de prueba creados")
 
-        console.log("\n✅ Base de datos poblada exitosamente!")
-        console.log("\n👤 Usuarios creados:")
+        console.log("\nBase de datos poblada exitosamente!")
+        console.log("\nUsuarios creados:")
         console.log("   Admin: admin@cursos.com / admin123")
         console.log("   Docente 1: juan.perez@cursos.com / docente123")
         console.log("   Docente 2: maria.garcia@cursos.com / docente123")
 
         process.exit(0)
     } catch (error) {
-        console.error("❌ Error poblando la base de datos:", error)
+        console.error("Error poblando la base de datos:", error)
         process.exit(1)
     }
 }

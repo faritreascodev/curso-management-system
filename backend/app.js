@@ -33,7 +33,7 @@ app.use("/api/", limiter)
 // CORS
 app.use(
   cors({
-    origin: process.env.NODE_ENV === "production" ? "https://tu-dominio.com" : "*",
+    origin: process.env.NODE_ENV === "production" ? "https://faritreasco.com" : "*",
     credentials: true,
   }),
 )
@@ -68,7 +68,7 @@ app.all("*", (req, res) => {
   })
 })
 
-// Middleware de manejo de errores (debe ir al final)
+// Middleware de manejo de errores (notaaa: debe ir al final)
 app.use(errorHandler)
 
 module.exports = app
